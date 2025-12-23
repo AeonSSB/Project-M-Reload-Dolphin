@@ -113,7 +113,7 @@ void PerformanceMetrics::DrawImGuiStats(const float backbuffer_scale)
   const bool movable_overlays = Config::Get(Config::GFX_MOVABLE_PERFORMANCE_METRICS);
   const int movable_flag = movable_overlays ? ImGuiWindowFlags_None : ImGuiWindowFlags_NoMove;
 
-  const float bg_alpha = 1.0f;
+  const float bg_alpha = 0.9f;
   const auto imgui_flags = ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoSavedSettings |
                            ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoNav | movable_flag |
                            ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_NoFocusOnAppearing;
@@ -272,7 +272,7 @@ void PerformanceMetrics::DrawImGuiStats(const float backbuffer_scale)
       if (stack_vertically)
         window_y += ImGui::GetWindowHeight() + window_padding;
       else
-        window_x -= ImGui::GetWindowWidth() + window_padding;
+        window_x += ImGui::GetWindowWidth() + window_padding;
       clamp_window_position();
       ImGui::TextColored(ImVec4(r, g, b, 1.0f), "Speed:%4.0lf%%", 100.0 * speed);
       ImGui::TextColored(ImVec4(r, g, b, 1.0f), "Max:%6.0lf%%", 100.0 * GetMaxSpeed());
@@ -282,17 +282,17 @@ void PerformanceMetrics::DrawImGuiStats(const float backbuffer_scale)
 
   if (g_ActiveConfig.bShowFPS || g_ActiveConfig.bShowFTimes)
   {
-    // P+ change: position in the top-right corner of the screen.
-    ImGui::SetNextWindowPos(ImVec2(window_x, window_y), set_next_position_condition,
+    // P+ change: Position in the top-left corner of the screen.
+    ImGui::SetNextWindowPos(ImVec2(window_x_left, window_y_left), set_next_position_condition,
                             ImVec2(0.0f, 0.0f));
     ImGui::SetNextWindowBgAlpha(bg_alpha);
 
     if (ImGui::Begin("FPSStats", nullptr, imgui_flags))
     {
-      if (stack_vertically)
+      /* if (stack_vertically)
         window_y += ImGui::GetWindowHeight() + window_padding;
       else
-        window_x -= ImGui::GetWindowWidth() + window_padding;
+        window_x -= ImGui::GetWindowWidth() + window_padding; */
       clamp_window_position();
       if (g_ActiveConfig.bShowFPS)
         ImGui::TextColored(ImVec4(r, g, b, 1.0f), "FPS:%7.2lf", fps);
@@ -323,7 +323,7 @@ void PerformanceMetrics::DrawImGuiStats(const float backbuffer_scale)
       if (stack_vertically)
         window_y += ImGui::GetWindowHeight() + window_padding;
       else
-        window_x -= ImGui::GetWindowWidth() + window_padding;
+        window_x += ImGui::GetWindowWidth() + window_padding;
       clamp_window_position();
       if (g_ActiveConfig.bShowVPS)
         ImGui::TextColored(ImVec4(r, g, b, 1.0f), "VPS:%7.2lf", vps);
