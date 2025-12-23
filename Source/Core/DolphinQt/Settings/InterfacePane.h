@@ -53,7 +53,6 @@ private:
 
   ConfigBool* m_checkbox_confirm_on_stop;
   ConfigBool* m_checkbox_use_panic_handlers;
-  ConfigBool* m_checkbox_adapter_warning; // move to OSD settings after merge
 
   ConfigBool* m_checkbox_show_active_title;
   ConfigBool* m_checkbox_pause_on_focus_lost;
