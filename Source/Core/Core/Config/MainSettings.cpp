@@ -48,7 +48,7 @@ const Info<int> MAIN_MAX_FALLBACK{{System::Main, "Core", "MaxFallback"}, 100};
 const Info<int> MAIN_TIMING_VARIANCE{{System::Main, "Core", "TimingVariance"}, 8};
 const Info<bool> MAIN_CORRECT_TIME_DRIFT{{System::Main, "Core", "CorrectTimeDrift"}, false};
 const Info<bool> MAIN_RUSH_FRAME_PRESENTATION{{System::Main, "Core", "RushFramePresentation"},
-                                              false};
+                                              true};
 const Info<bool> MAIN_SMOOTH_EARLY_PRESENTATION{{System::Main, "Core", "SmoothEarlyPresentation"},
                                                 false};
 #if defined(ANDROID)
