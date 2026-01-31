@@ -105,7 +105,7 @@ std::string ArtworkForGameId()
   const bool is_wii = Core::System::GetInstance().IsWii();
   const std::string region_code = SConfig::GetInstance().GetGameTDBImageRegionCode(is_wii, region);
 
-  if (SConfig::GetInstance().GetGameTDBID() == "RSBE01" || "ID-Project+ Netplay Launcher")
+  if (SConfig::GetInstance().GetGameTDBID() == "RSBE01" || "ID-Project M Reload Netplay Launcher")
   {
     static constexpr char cover_url[] = "https://art.gametdb.com/wii/coverB/US/RSBEPL.png";
     return fmt::format(cover_url, region_code, SConfig::GetInstance().GetGameTDBID());
@@ -229,10 +229,10 @@ void UpdateDiscordPresence(int party_size, SecretType type, const std::string& s
     discord_presence.largeImageKey = "https://art.gametdb.com/wii/coverB2/US/RSBEPM.png";
     discord_presence.largeImageText = "Project M";
   }
-  else if (SConfig::GetInstance().GetGameID() == "RSBE01" || "ID-Project M Netplay Launcher")
+  else if (SConfig::GetInstance().GetGameID() == "RSBE01" || "ID-Project M Reload Netplay Launcher")
   {
     discord_presence.largeImageKey = "https://art.gametdb.com/wii/coverB2/US/RSBEPM.png";
-    discord_presence.largeImageText = "Project M";
+    discord_presence.largeImageText = "Project M Reload";
     discord_presence.smallImageKey = "dolphin_logo";
     discord_presence.smallImageText = "Dolphin is an emulator for the GameCube and the Wii.";
   }
@@ -245,9 +245,9 @@ void UpdateDiscordPresence(int party_size, SecretType type, const std::string& s
   }
   if (title.empty())
     discord_presence.details = "Not in-game";
-  else if (SConfig::GetInstance().GetGameID() == "RSBE01" || "ID-Project M Netplay Launcher")
+  else if (SConfig::GetInstance().GetGameID() == "RSBE01" || "ID-Project M Reload Netplay Launcher")
   {
-    discord_presence.details = "Project M";
+    discord_presence.details = "Project M Reload";
   }
   else
     discord_presence.details = title.c_str();

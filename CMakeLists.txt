@@ -28,7 +28,7 @@ set(CMAKE_OSX_DEPLOYMENT_TARGET "11.0.0" CACHE STRING "")
 
 set(CMAKE_USER_MAKE_RULES_OVERRIDE "${CMAKE_CURRENT_SOURCE_DIR}/CMake/FlagsOverride.cmake")
 
-project(project-plus-dolphin)
+project(project-m-reload-dolphin)
 
 if (CMAKE_VERSION VERSION_LESS "3.25" AND CMAKE_SYSTEM_NAME MATCHES "Linux")
   set(LINUX TRUE)
@@ -183,7 +183,7 @@ include(RemoveCompileFlag)
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
 # Set up paths
-set(datadir ${CMAKE_INSTALL_FULL_DATADIR}/project-plus-dolphin CACHE PATH "datadir")
+set(datadir ${CMAKE_INSTALL_FULL_DATADIR}/project-m-reload-dolphin CACHE PATH "datadir")
 add_definitions(-DDATA_DIR="${datadir}/")
 
 if(CMAKE_SYSROOT)
@@ -860,22 +860,22 @@ if(NOT CMAKE_SYSTEM_NAME MATCHES "Linux|FreeBSD|OpenBSD|Darwin")
 endif()
 if(CMAKE_SYSTEM_NAME MATCHES "Linux|FreeBSD|OpenBSD")
   # Install the application icon and menu item
-  install(FILES Data/project-plus-dolphin.svg
+  install(FILES Data/project-m-reload-dolphin.svg
           DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/scalable/apps)
-  install(FILES Data/project-plus-dolphin.png
+  install(FILES Data/project-m-reload-dolphin.png
 		  DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/256x256/apps)
-  install(FILES Data/project-plus-dolphin.desktop
+  install(FILES Data/project-m-reload-dolphin.desktop
           DESTINATION ${CMAKE_INSTALL_PREFIX}/share/applications)
   # Install manpages
-  install(FILES Data/project-plus-dolphin.6
+  install(FILES Data/project-m-reload-dolphin.6
           DESTINATION ${CMAKE_INSTALL_MANDIR}/man6)
-  install(FILES Data/project-plus-dolphin-nogui.6
+  install(FILES Data/project-m-reload-dolphin-nogui.6
           DESTINATION ${CMAKE_INSTALL_MANDIR}/man6)
 endif()
 
 # packaging information
-set(CPACK_PACKAGE_NAME "project-plus-dolphin")
-set(CPACK_PACKAGE_VENDOR "Project Plus Development Team")
+set(CPACK_PACKAGE_NAME "project-m-reload-dolphin")
+set(CPACK_PACKAGE_VENDOR "PMDT, P+Dt and more")
 set(CPACK_PACKAGE_VERSION_MAJOR ${DOLPHIN_VERSION_MAJOR})
 set(CPACK_PACKAGE_VERSION_MINOR ${DOLPHIN_VERSION_MINOR})
 set(CPACK_PACKAGE_VERSION_PATCH ${DOLPHIN_VERSION_PATCH})

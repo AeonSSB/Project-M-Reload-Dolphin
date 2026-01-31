@@ -9,7 +9,7 @@
 
 namespace Common
 {
-#define EMULATOR_NAME "Project M 3.6R Dolphin"
+#define EMULATOR_NAME "Project M Reload Dolphin"
 
 #ifdef _DEBUG
 #define BUILD_TYPE_STR "Debug "

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+	<id>org.projectplusgame.project-m-reload-dolphin</id>
+	<name>Project M Reload Dolphin</name>
+	<summary>GameCube / Wii / Triforce Emulator for Project M</summary>
+	<metadata_license>CC-BY-SA-3.0</metadata_license>
+	<project_license>GPL-2.0+</project_license>
+	<supports>
+		<control>pointing</control>
+		<control>keyboard</control>
+		<control>gamepad</control>
+	</supports>
+	<description>
+		<p>
+      A fork of the Dolphin emulator for playing the Brawl mod Project M.
+    </p>
+	</description>
+	<provides>
+		<binary>project-m-reload-dolphin</binary>
+		<id>org.projectplusgame.project-m-reload-dolphin.desktop</id>
+	</provides>
+	<releases>
+		<release version="3.6R" date="2026-01-02"/>
+	</releases>
+	<launchable type="desktop-id">org.projectplusgame.project-m-reload-dolphin.desktop</launchable>
+</component>

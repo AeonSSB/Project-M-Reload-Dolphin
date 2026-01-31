@@ -24,13 +24,13 @@ DESTDIR=./AppDir ninja install
 mkdir -p ./AppDir/usr/Source/Core
 cp -r ./Source/Core/DolphinQt ./AppDir/usr/Source/Core
 rm -rf ./AppDir/usr/Source/Core/DolphinQt/CMakeFiles
-rm -rf ./AppDir/usr/Source/Core/DolphinQt/project-plus-dolphin_autogen
+rm -rf ./AppDir/usr/Source/Core/DolphinQt/project-m-reload-dolphin_autogen
 rm ./AppDir/usr/Source/Core/DolphinQt/cmake_install.cmake
-rm ./AppDir/usr/bin/project-plus-dolphin-nogui
+rm ./AppDir/usr/bin/project-m-reload-dolphin-nogui
 rm ./AppDir/usr/bin/dolphin-tool
-mv ./AppDir/usr/share/project-plus-dolphin/sys ./AppDir/usr/bin/Sys
-rm -rf ./AppDir/usr/share/project-plus-dolphin
-sed -i 's/env QT_QPA_PLATFORM=xcb project-plus-dolphin/project-plus-dolphin/g' ./AppDir/usr/share/applications/project-plus-dolphin.desktop
+mv ./AppDir/usr/share/project-m-reload-dolphin/sys ./AppDir/usr/bin/Sys
+rm -rf ./AppDir/usr/share/project-m-reload-dolphin
+sed -i 's/env QT_QPA_PLATFORM=xcb project-m-reload-dolphin/project-m-reload-dolphin/g' ./AppDir/usr/share/applications/project-m-reload-dolphin.desktop
 
 # Prepare Tools for building the AppImage
 wget -N https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-${ARCH}.AppImage

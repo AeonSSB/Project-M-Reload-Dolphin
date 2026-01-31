@@ -23,7 +23,7 @@ if(${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
   target_sources(dolphin-nogui PRIVATE PlatformFBDev.cpp)
 endif()
 
-set_target_properties(dolphin-nogui PROPERTIES OUTPUT_NAME project-plus-dolphin-nogui)
+set_target_properties(dolphin-nogui PROPERTIES OUTPUT_NAME project-m-reload-dolphin-nogui)
 
 target_link_libraries(dolphin-nogui
 PRIVATE

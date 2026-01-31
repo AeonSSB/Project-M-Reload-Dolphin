@@ -1,11 +1,11 @@
-app-id: org.projectplusgame.project-plus-dolphin
+app-id: org.projectplusgame.project-m-reload-dolphin
 branch: master
 runtime: org.kde.Platform
 runtime-version: 6.6
 sdk: org.kde.Sdk
-command: project-plus-dolphin-wrapper.sh
-rename-desktop-file: project-plus-dolphin.desktop
-rename-icon: project-plus-dolphin
+command: project-m-reload-dolphin-wrapper.sh
+rename-desktop-file: project-m-reload-dolphin.desktop
+rename-icon: project-m-reload-dolphin
 finish-args:
   - --device=all # need for controllers
   # the file picker uses portals but the set
@@ -97,7 +97,7 @@ modules:
         url: https://github.com/Unrud/xdg-screensaver-shim/archive/0.0.2.tar.gz
         sha256: 0ed2a69fe6ee6cbffd2fe16f85116db737f17fb1e79bfb812d893cf15c728399
 
-  - name: project-plus-dolphin
+  - name: project-m-reload-dolphin
     buildsystem: cmake-ninja
     config-opts:
       - -DCMAKE_BUILD_TYPE=Release
@@ -110,8 +110,8 @@ modules:
       - /share/man
     sources:
       - type: git
-        url: https://github.com/Project-Plus-Development-Team/Project-Plus-Dolphin
-        tag: v3.1.5-2601  													#uncomment and update these two lines to build a specific commit
+        url: https://github.com/AeonSSB/Project-M-Reload-Dolphin
+        tag: v3.6R  													#uncomment and update these two lines to build a specific commit
         commit: 965d0567a5f899faa28c4f4a49a83a34145a488c
         
       # TODO: Add x-checker-data
@@ -123,7 +123,7 @@ modules:
       # TODO: Add x-checker-data
       # Project Plus .dol files and icon
       - type: archive
-        url: https://github.com/jlambert360/FPM-AppImage/releases/download/v3.1.2/Launcher.tar.gz
+        url: https://github.com/AeonSSB/Project-M-Reload-Dolphin/releases/download/v3.6R/Launcher.tar.gz
         sha256: 1b9dce2fb0eac3ad8cc809826b3b6bfd4ce30dbfc394eaa586e35dcd356fd189                  # This is the hash of the tar.gz file not the uncompressed
         dest: Launcher
 
@@ -136,11 +136,11 @@ modules:
 
       # Script that is ran everytime the final Flatpak starts
       - type: file
-        path: project-plus-dolphin-wrapper.sh
+        path: project-m-reload-dolphin-wrapper.sh
         
       # Metadata file for Flatpak repos
       - type: file
-        path: org.projectplusgame.project-plus-dolphin.metainfo.xml
+        path: org.projectplusgame.project-m-reload-dolphin.metainfo.xml
 
       # detects whether dolphin is running in a flatpak sandbox
       # and makes it use xdg directories if it is.
@@ -158,15 +158,15 @@ modules:
       #  dest-filename: project-plus-dolphin-wrapper
     post-install:
       - |
-      - install -D -t ${FLATPAK_DEST}/bin/ project-plus-dolphin-wrapper.sh
-      - desktop-file-edit --set-key=Exec --set-value='/app/bin/project-plus-dolphin-wrapper.sh'
-        /app/share/applications/project-plus-dolphin.desktop
-      - desktop-file-edit --set-key=Name --set-value='Project Plus Dolphin'
-        /app/share/applications/project-plus-dolphin.desktop
-      - rm -r ${FLATPAK_DEST}/share/project-plus-dolphin/sys                                                                                       # Remove preinstalled sys directory
-      - mv Data/Sys ${FLATPAK_DEST}/share/project-plus-dolphin/sys/                                                                                # Move Sys directory to correct location (only use without the -DLINUX_LOCAL_DEV=true flag set
+      - install -D -t ${FLATPAK_DEST}/bin/ project-m-reload-dolphin-wrapper.sh
+      - desktop-file-edit --set-key=Exec --set-value='/app/bin/project-m-reload-dolphin-wrapper.sh'
+        /app/share/applications/project-pm-reload-dolphin.desktop
+      - desktop-file-edit --set-key=Name --set-value='Project M Reload Dolphin'
+        /app/share/applications/project-m-reload-dolphin.desktop
+      - rm -r ${FLATPAK_DEST}/share/project-m-reload-dolphin/sys                                                                                       # Remove preinstalled sys directory
+      - mv Data/Sys ${FLATPAK_DEST}/share/project-m-reload-dolphin/sys/                                                                                # Move Sys directory to correct location (only use without the -DLINUX_LOCAL_DEV=true flag set
       #- tar --transform="s|sd.raw|WiiSD.raw|" -xf sd.tar.gz -C ${FLATPAK_DEST}/share/project-plus-dolphin/user/Wii/                               # Extract, rename and move SD card to correct location
       #- mv Launcher ${FLATPAK_DEST}/share/project-plus-dolphin/sys/Wii/                                                                            # Move Launcher directory to correct location
       #- mkdir -p ${FLATPAK_DEST}/share/project-plus-dolphin/sys/Load/Textures                                                                      # Make directory for HD textures
       #- mv "ModPack/Full Quality HD Textures" ${FLATPAK_DEST}/share/project-plus-dolphin/sys/Load/Textures/RSBE01/                              	  # Move HD Textures from ModPack to correct location
-      - install -Dm644 org.projectplusgame.project-plus-dolphin.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo/                                    # Install metainfo file
+      - install -Dm644 org.projectplusgame.project-m-reload-dolphin.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo/                                    # Install metainfo file
