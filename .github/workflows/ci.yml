@@ -141,7 +141,7 @@ jobs:
                 -B build-arm .
 
       - name: Purge .git for space reasons
-        run: rm -rf /home/runner/work/Project-Plus-Dolphin-src/.git
+        run: rm -rf /home/runner/work/Project-M-Reload-Dolphin-src/.git
       - name: Build Dolphin (x86_64)
         working-directory: build
         run: |
@@ -221,7 +221,7 @@ jobs:
     - name: Checkout Upstream Repo
       uses: actions/checkout@v4
       with:
-        repository: Project-Plus-Development-Team/Project-Plus-Dolphin
+        repository: Project-Plus-Development-Team/Project-M-Reload-Dolphin
         ref: master
         fetch-depth: 0
 
@@ -323,7 +323,7 @@ jobs:
         chmod a+x ./squashfs-root/runtime
         chmod a+x ./squashfs-root/AppRun-patched
         chmod a+x ./squashfs-root/update.sh
-        export UPD_INFO="gh-releases-zsync|Project-Plus-Development-Team|Project-Plus-Dolphin|continuous|Project+_Dolphin-x86_64.AppImage.zsync"
+        export UPD_INFO="gh-releases-zsync|AeonSSB|Project-M-Reload-Dolphin|continuous|Project+_Dolphin-x86_64.AppImage.zsync"
         /tmp/squashfs-root/AppRun --appdir="$GITHUB_WORKSPACE"/squashfs-root/ --plugin qt -d "$GITHUB_WORKSPACE"/squashfs-root/project-plus-dolphin.desktop -i "$GITHUB_WORKSPACE"/squashfs-root/project-plus-dolphin.svg \
         --exclude-library=libglib* --output appimage
         ls . | grep *.AppImage

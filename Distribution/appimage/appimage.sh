@@ -25,8 +25,8 @@ cd $HOME
 mkdir -p squashfs-root/usr/bin
 cp -P "$BUILDBIN"/project-plus-dolphin $HOME/squashfs-root/usr/bin/
 
-curl -sL https://raw.githubusercontent.com/Project-Plus-Development-Team/Project-Plus-Dolphin/$branch/Data/project-plus-dolphin.svg -o ./squashfs-root/project-plus-dolphin.svg
-curl -sL https://raw.githubusercontent.com/Project-Plus-Development-Team/Project-Plus-Dolphin/$branch/Data/project-plus-dolphin.desktop -o ./squashfs-root/project-plus-dolphin.desktop
+curl -sL https://raw.githubusercontent.com/AeonSSB/Project-M-Reload-Dolphin/$branch/Data/project-plus-dolphin.svg -o ./squashfs-root/project-plus-dolphin.svg
+curl -sL https://raw.githubusercontent.com/AeonSSB/Project-M-Reload-Dolphin/$branch/Data/project-plus-dolphin.desktop -o ./squashfs-root/project-plus-dolphin.desktop
 curl -sL https://github.com/AppImage/AppImageKit/releases/download/continuous/runtime-x86_64 -o ./squashfs-root/runtime
 mkdir -p squashfs-root/usr/share/applications && cp ./squashfs-root/project-plus-dolphin.desktop ./squashfs-root/usr/share/applications
 mkdir -p squashfs-root/usr/share/icons && cp ./squashfs-root/project-plus-dolphin.svg ./squashfs-root/usr/share/icons
@@ -36,8 +36,8 @@ mkdir -p squashfs-root/usr/optional/ ; mkdir -p squashfs-root/usr/optional/libst
 
 mkdir -p squashfs-root/usr/share/project-plus-dolphin
 cp -R /dolphin/dolphin/Data/Sys ./squashfs-root/usr/bin
-curl -sL "https://raw.githubusercontent.com/Project-Plus-Development-Team/Project-Plus-Dolphin/$branch/Distribution/appimage/update.sh" -o $HOME/squashfs-root/update.sh
-curl -sL "https://raw.githubusercontent.com/Project-Plus-Development-Team/Project-Plus-Dolphin/$branch/Distribution/appimage/AppRun" -o $HOME/squashfs-root/AppRun
+curl -sL "https://raw.githubusercontent.com/AeonSSB/Project-M-Reload-Dolphin/$branch/Distribution/appimage/update.sh" -o $HOME/squashfs-root/update.sh
+curl -sL "https://raw.githubusercontent.com/AeonSSB/Project-M-Reload-Dolphin/$branch/Distribution/appimage/AppRun" -o $HOME/squashfs-root/AppRun
 curl -sL "https://github.com/RPCS3/AppImageKit-checkrt/releases/download/continuous2/AppRun-patched-x86_64" -o $HOME/squashfs-root/AppRun-patched
 curl -sL "https://github.com/RPCS3/AppImageKit-checkrt/releases/download/continuous2/exec-x86_64.so" -o $HOME/squashfs-root/usr/optional/exec.so
 chmod a+x ./squashfs-root/AppRun
