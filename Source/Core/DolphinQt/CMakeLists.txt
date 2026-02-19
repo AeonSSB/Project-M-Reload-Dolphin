@@ -572,7 +572,7 @@ if(GETTEXT_MSGFMT_EXECUTABLE)
   set(pot_file "${CMAKE_SOURCE_DIR}/Languages/po/project-m-reload-dolphin.pot")
   file(GLOB LINGUAS ${CMAKE_SOURCE_DIR}/Languages/po/*.po)
 
-  target_sources(project-pm-reload-dolphin PRIVATE ${pot_file} ${LINGUAS})
+  target_sources(project-m-reload-dolphin PRIVATE ${pot_file} ${LINGUAS})
   source_group("Localization" FILES ${LINGUAS})
   source_group("Localization\\\\Generated" FILES ${pot_file})
 
