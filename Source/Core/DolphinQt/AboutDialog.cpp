@@ -39,7 +39,7 @@ AboutDialog::AboutDialog(QWidget* parent) : QDialog(parent)
 </p>
 
 <p>
-Built on Dolphin 2512.
+Built on Dolphin 2512. %CHECK_FOR_UPDATES%: <a href='https://projectplusgame.com'>projectplusgame.com.</a>
 </p>
 
 <p>
