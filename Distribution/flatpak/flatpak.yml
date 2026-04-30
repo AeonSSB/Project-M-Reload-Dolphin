@@ -160,7 +160,7 @@ modules:
       - |
       - install -D -t ${FLATPAK_DEST}/bin/ project-m-reload-dolphin-wrapper.sh
       - desktop-file-edit --set-key=Exec --set-value='/app/bin/project-m-reload-dolphin-wrapper.sh'
-        /app/share/applications/project-pm-reload-dolphin.desktop
+        /app/share/applications/project-m-reload-dolphin.desktop
       - desktop-file-edit --set-key=Name --set-value='Project M Reload Dolphin'
         /app/share/applications/project-m-reload-dolphin.desktop
       - rm -r ${FLATPAK_DEST}/share/project-m-reload-dolphin/sys                                                                                       # Remove preinstalled sys directory
