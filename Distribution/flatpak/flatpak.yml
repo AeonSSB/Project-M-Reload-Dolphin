@@ -123,8 +123,8 @@ modules:
       # TODO: Add x-checker-data
       # Project Plus .dol files and icon
       - type: archive
-        url: https://github.com/AeonSSB/Project-M-Reload-Dolphin/releases/download/v3.6R/Launcher.tar.gz
-        sha256: 1b9dce2fb0eac3ad8cc809826b3b6bfd4ce30dbfc394eaa586e35dcd356fd189                  # This is the hash of the tar.gz file not the uncompressed
+        url: https://github.com/FlowerGirlSmug/MiscPPlusReleases/releases/download/Launch/PM-Reload-Launcher.tar.gz
+        sha256: 1ec37de552fdac90ffbcf532ad1c1b9e8a192ef0a302d272713f21a0345b5dce                  # This is the hash of the tar.gz file not the uncompressed
         dest: Launcher
 
       # TODO: Add x-checker-data
