@@ -1,4 +1,4 @@
-name: Project+ Dolphin Builder
+name: Project M Reload Dolphin Builder
 
 on: [push, pull_request]
 
@@ -323,7 +323,7 @@ jobs:
         chmod a+x ./squashfs-root/runtime
         chmod a+x ./squashfs-root/AppRun-patched
         chmod a+x ./squashfs-root/update.sh
-        export UPD_INFO="gh-releases-zsync|AeonSSB|Project-M-Reload-Dolphin|continuous|Project_M_Dolphin-x86_64.AppImage.zsync"
+        export UPD_INFO="gh-releases-zsync|AeonSSB|Project-M-Reload-Dolphin|continuous|Project_M_Reload_Dolphin-x86_64.AppImage.zsync"
         /tmp/squashfs-root/AppRun --appdir="$GITHUB_WORKSPACE"/squashfs-root/ --plugin qt -d "$GITHUB_WORKSPACE"/squashfs-root/project-m-reload-dolphin.desktop -i "$GITHUB_WORKSPACE"/squashfs-root/project-m-reload-dolphin.svg \
         --exclude-library=libglib* --output appimage
         ls . | grep *.AppImage
@@ -333,7 +333,7 @@ jobs:
         cat "$GITHUB_WORKSPACE"/squashfs-root/AppRun
         /tmp/squashfs-root/usr/bin/linuxdeploy-plugin-appimage --appdir="$GITHUB_WORKSPACE"/squashfs-root/
         ls . | grep *.AppImage
-        mv Project+_Dolphin-x86_64.AppImage $GITHUB_WORKSPACE/uploads/Dolphin_${DOLPHINVER}.AppImage
+        mv Project_M_Reload_Dolphin-x86_64.AppImage $GITHUB_WORKSPACE/uploads/Dolphin_${DOLPHINVER}.AppImage
         ls -al $GITHUB_WORKSPACE/uploads
       continue-on-error: true
     - name: Upload Static Build
