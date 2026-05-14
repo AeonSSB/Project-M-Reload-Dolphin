@@ -11,7 +11,7 @@
 	fi
 
 if [ "$answer" -eq 0 ]; then 
-	$APPDIR/usr/bin/AppImageUpdate $PWD/Project+_Dolphin-x86_64.AppImage "$@" && $PWD/Project+_Dolphin-x86_64.AppImage "$@"
+	$APPDIR/usr/bin/AppImageUpdate $PWD/Project_M_Reload_Dolphin-x86_64.AppImage "$@" && $PWD/Project_M_Reload_Dolphin-x86_64.AppImage "$@"
 else
 	$APPDIR/AppRun-patched "$@"
 fi

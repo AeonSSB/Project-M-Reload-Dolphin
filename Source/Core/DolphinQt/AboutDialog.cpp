@@ -14,7 +14,7 @@
 
 AboutDialog::AboutDialog(QWidget* parent) : QDialog(parent)
 {
-  setWindowTitle(tr("About Project+ Dolphin"));
+  setWindowTitle(tr("About Project M Reload Dolphin"));
 
   QString branch_str = QString::fromStdString(Common::GetScmBranchStr());
   const int commits_ahead = Common::GetScmCommitsAheadMaster();
@@ -28,7 +28,7 @@ AboutDialog::AboutDialog(QWidget* parent) : QDialog(parent)
 
   const QString text =
       QStringLiteral(R"(
-<p style='font-size:34pt; font-weight:400;'>Project+ Dolphin</p>
+<p style='font-size:34pt; font-weight:400;'>Project M Reload Dolphin</p>
 
 <p style='font-size:18pt;'>%VERSION_STRING%</p>
 
@@ -52,7 +52,7 @@ Built on Dolphin 2512. %CHECK_FOR_UPDATES%: <a href='https://projectplusgame.com
 
 <p>
 <a href='https://github.com/AeonSSB/Project-M-Reload-Dolphin/blob/master/COPYING'>License</a> |
-<a href='https://github.com/dolphin-emu/dolphin/graphs/contributors'>Dolphin Authors</a> |
+<a href='https://github.com/AeonSSB/Project-M-Reload-Dolphin/graphs/contributors'>Dolphin Authors</a> |
 <a href='https://discord.gg/vdssRDg'>Setup Support</a>
 )")
           .replace(QStringLiteral("%VERSION_STRING%"),

@@ -875,12 +875,12 @@ endif()
 
 # packaging information
 set(CPACK_PACKAGE_NAME "project-m-reload-dolphin")
-set(CPACK_PACKAGE_VENDOR "PMDT, P+Dt and more")
+set(CPACK_PACKAGE_VENDOR "PMDT, P+DT and more")
 set(CPACK_PACKAGE_VERSION_MAJOR ${DOLPHIN_VERSION_MAJOR})
 set(CPACK_PACKAGE_VERSION_MINOR ${DOLPHIN_VERSION_MINOR})
 set(CPACK_PACKAGE_VERSION_PATCH ${DOLPHIN_VERSION_PATCH})
 set(CPACK_PACKAGE_DESCRIPTION_FILE ${PROJECT_SOURCE_DIR}/Data/cpack_package_description.txt)
-set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "A GameCube and Wii emulator designed for use with Project+")
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "A GameCube and Wii emulator designed for use with Project M")
 
 set(CPACK_RPM_PACKAGE_GROUP System/Emulators/Other)
 set(CPACK_RPM_PACKAGE_LICENSE GPL-2.0)
