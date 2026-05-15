@@ -5,6 +5,6 @@ Exec=project-m-reload-dolphin
 Terminal=false
 Type=Application
 Categories=Game;Emulator;
-Name=Project M Dolphin
+Name=Project M Reload Dolphin
 GenericName=Wii/GameCube Emulator
 Comment=A Wii/GameCube Emulator
