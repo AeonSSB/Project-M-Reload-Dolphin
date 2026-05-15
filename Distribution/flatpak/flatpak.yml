@@ -112,7 +112,7 @@ modules:
       - type: git
         url: https://github.com/AeonSSB/Project-M-Reload-Dolphin
         tag: v3.6R  													#uncomment and update these two lines to build a specific commit
-        commit: 4bf6a57cb8526914509ef3310c988d6f6c1231e1
+        commit: 269bf6a620cd099d7bacded70ea41e4a4cb0f5b7
         
       # TODO: Add x-checker-data
       # Project Plus SD card
